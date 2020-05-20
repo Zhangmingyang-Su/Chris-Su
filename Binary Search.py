@@ -45,7 +45,7 @@ def closest(array, target):
     return None
   left, right = 0, len(array) - 1
   while left < right - 1:
-    mid = left + (right - left) // 
+    mid = left + (right - left) // 2
     if array[mid] < target:
       left = mid
     elif array[mid] > target:
@@ -53,6 +53,48 @@ def closest(array, target):
     else:
       return mid
   return left if abs(left - target) < abs(right - target) else right
+
+# 4 first occurrence
+# eg. input -> [1, 2, 2, 3, 4, 5], target = 2 output -> 1
+def firstOccurrence(array, target):
+  if not array:
+    return None
+  left, right = 0, len(array) - 1
+  while left < right - 1:
+    mid = left + (right - left) // 2
+    if array[mid] < target:
+      left = mid + 1
+    elif array[mid] > target:
+      right = mid - 1
+    else:
+      right = mid
+  # post processing
+  if array[left] == target:
+    return left
+  if array[right] == target:
+    return right
+  return None
+
+# 5 last occurrence
+# eg. input -> [1, 2, 2, 3, 4, 5], target = 2 output -> 2
+def firstOccurrence(array, target):
+  if not array:
+    return None
+  left, right = 0, len(array) - 1
+  while left < right - 1:
+    mid = left + (right - left) // 2
+    if array[mid] < target:
+      left = mid + 1
+    elif array[mid] > target:
+      right = mid - 1
+    else:
+      left = mid
+  # post processing
+  if array[right] == target:
+    return right
+  if array[left] == target:
+    return left
+  return None
       
      
    
