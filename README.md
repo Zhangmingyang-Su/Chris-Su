@@ -1,4 +1,4 @@
-# Data-Analysis-Projects
+# Data Structure and Algorithm
 
-This repository is aimed at data analysis projects and some popular machine learning or statistic algorithms.  
+in this repository, I will list some important and useful Algorithm in Machine Learning and Computer Science 
 
