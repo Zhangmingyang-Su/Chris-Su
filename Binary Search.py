@@ -100,7 +100,7 @@ def square_root(n):
   if n <= 1:
      return n
   left, right = 0, n // 2
-  while left <= right:
+  while left < right - 1:
     mid = left + (right-left) // 2
     mid_square = mid * mid
     if mid_square == n:
