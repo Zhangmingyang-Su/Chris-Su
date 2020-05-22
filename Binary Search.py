@@ -95,6 +95,27 @@ def firstOccurrence(array, target):
   if array[left] == target:
     return left
   return None
+
+def square_root(n):
+  if n <= 1:
+     return n
+  left, right = 0, n // 2
+  while left <= right:
+    mid = left + (right-left) // 2
+    mid_square = mid * mid
+    if mid_square == n:
+      return mid_square
+    elif mid_square > n:
+      right = mid
+    else:
+      left = mid
+   if right * right <= n:
+    return right
+   return left
+   
+      
+      
+  
       
      
    
