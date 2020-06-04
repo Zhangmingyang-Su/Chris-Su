@@ -23,5 +23,6 @@ In this repository, I will list some important and useful Algorithm in Machine L
 4. Gradient Boosted
 5. Time Series
 6. U-Net
+7. Wide and Deep 
 
 
